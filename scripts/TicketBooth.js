@@ -1,6 +1,7 @@
 import { FoodTicketHolder } from "./food/FoodTicketHolder.js"
 import { GameTicketHolder } from "./games/GameTicketHolder.js"
 import { RideTicketHolders } from "./rides/RideTicketHolders.js"
+import { SideshowTicketHolder } from "./sideshows/SideShowTicketHolder.js"
 
 const contentTarget = document.querySelector(".entry")
 const eventHub = document.querySelector("#state-fair")
@@ -17,6 +18,7 @@ export const TicketBooth = () => {
             <button id = "rideTicket">Ride Ticket</button>
             <button id = "foodTicket">Food Ticket</button>
             <button id = "gameTicket">Game Ticket</button>
+            <button id = "sideshowTicket">Sideshow Ticket</button>
         </div>`
 }
 
@@ -37,5 +39,12 @@ eventHub.addEventListener(
     "gameTicketPurchased",
     (customEvent) => {
         GameTicketHolder()
+    }
+)
+
+eventHub.addEventListener(
+    "sideshowTicketPurchased",
+    (customEvent) => {
+        SideshowTicketHolder()
     }
 )
