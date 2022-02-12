@@ -57,9 +57,6 @@ h1,h2,h3,h4,h5,h6 {
     background-color: dodgerblue;
 }
 
-.bigSpender {
-    background-color: orange;
-}
 
 .player {
     background-color: lawngreen;
@@ -72,5 +69,9 @@ h1,h2,h3,h4,h5,h6 {
 .customers {
     font-weight: 700;
     padding: 1rem;
+}
+
+.bigSpender {
+    background-color: orange;
 }
 

@@ -1,9 +1,9 @@
 const contentTarget = document.querySelector(".food")
 const eventHub = document.querySelector("#state-fair")
 
-export const FoodTicketHolder = () => {
-    let html = `<div class="person eater"></div>`
-    contentTarget.innerHTML += html
+export const FoodTicketHolder = (fullTicketClass) => {
+    let html = `<div class="person eater ${fullTicketClass}"></div>`
+    contentTarget.innerHTML += html ///adds a box each time
     return contentTarget
 
 }
@@ -14,6 +14,7 @@ eventHub.addEventListener(
         if(clickEvent.target.id === "foodTicket"){
             const foodListener = new CustomEvent("foodTicketPurchased")
             eventHub.dispatchEvent(foodListener)   
+            const ticketListener = new CustomEvent("ticketPurchased")
         }   
     }
 )

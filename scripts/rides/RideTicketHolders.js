@@ -1,10 +1,12 @@
 const contentTarget = document.querySelector(".rides")
 const eventHub = document.querySelector("#state-fair")
 
+
+
 //this function will be called everytime the customEvent (notification) "rideTicketPurchased" is heard in eventHub
-export const RideTicketHolders = () => {
+export const RideTicketHolders = (fullTicketClass) => {
     let html = `
-    <div class = "person rider"></div>`
+    <div class = "person rider ${fullTicketClass}"></div>`
     contentTarget.innerHTML += html
     return contentTarget
     }

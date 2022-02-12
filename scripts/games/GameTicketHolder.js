@@ -2,8 +2,8 @@ const contentTarget = document.querySelector(".games")
 const eventHub = document.querySelector("#state-fair")
 
 
-export const GameTicketHolder = () => {
-    let html = `<div class="person player"></div>`
+export const GameTicketHolder = (fullTicketClass) => {
+    let html = `<div class="person player ${fullTicketClass}"></div>`
     contentTarget.innerHTML += html
     return contentTarget
 
